@@ -56,7 +56,7 @@ export default function Home() {
                         <div className={style.cardsContainer}>
                             {
                                 renderPlaces.length ?
-                                    renderPlaces === "404" ?
+                                    renderPlaces === "408" ?
                                         (
                                             <h1>Not Found</h1>
                                         )
