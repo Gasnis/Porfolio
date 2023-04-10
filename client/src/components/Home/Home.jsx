@@ -13,6 +13,7 @@ import {
 import videogameslogo from "../../img/videogame.png";
 import where from "../../img/where.png";
 import zurcher from "../../img/zurcher.png";
+import profile  from "../../img/profile.jpg"
 
 export default function Home() {
   const about = useRef()
@@ -122,8 +123,7 @@ export default function Home() {
             <IoLogoJavascript className={style.loguitos} />
             <p>
               Zurcher Handyman is an app for a worker in florida in this app you
-              can see all his jobs and contact via mail with him to book and
-              budget it
+              can see all his jobs and contact via email to book and estimate the work you want
             </p>
           </div>
         </a>
@@ -136,6 +136,7 @@ export default function Home() {
           <div>
           <h1>About me</h1>
           </div>
+          <img src={profile} alt="" />
           <p>
             I am a Fullstack Developer with experience in JavaScript, React,
             Redux, HTML, CSS, Express, Node JS, SQL, and Sequelize. I focus on

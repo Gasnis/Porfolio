@@ -124,3 +124,9 @@ a{
   border-radius: 15px;
   font-weight: 800;
 }
+.about img{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+
+}
