@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import style from "./home.module.css";
 import logo from "../../img/anime.gif";
 import ScrollUpButtom from "../ScrollUpButton/ScrollUpButton.jsx";
@@ -13,20 +13,32 @@ import {
 import videogameslogo from "../../img/videogame.png";
 import where from "../../img/where.png";
 import zurcher from "../../img/zurcher.png";
-import profile  from "../../img/profile.jpg"
+import profile from "../../img/profile.jpg"
+import foodTicket from "../../img/foodticket.png";
 
 export default function Home() {
+  const proyects = useRef()
   const about = useRef()
+  const contact = useRef()
   
+  const scrolltopproyects = () => {
+    proyects.current.scrollIntoView({ behavior: "smooth" })
+  }
   const scrolltoabout = () => {
     about.current.scrollIntoView({ behavior: "smooth" })
   }
+
+  const scrolltocontact = () => {
+    contact.current.scrollIntoView({ behavior: "smooth" })
+  }
+
+
   return (
     <div className={style.principalDiv}>
       <div className={style.navbar}>
+        <p onClick={scrolltopproyects}>Projects</p>
         <p onClick={scrolltoabout}>About Me</p>
-        <p>Projects</p>
-        <p>Contact</p>
+        <p onClick={scrolltocontact}>Contact</p>
       </div>
 
       <div className={style.namecontainer}>
@@ -55,18 +67,14 @@ export default function Home() {
         </div>
 
         <div>
-          <img src={logo} alt="" />
+          <img src={logo} alt=""  className={style.logo}/>
         </div>
       </div>
 
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        className={style.projectsContainer} ref={proyects}
       >
-        <h1 className={style.full}>PROJECT</h1>
+        <h1 className={style.full}>PROJECTS</h1>
       </div>
 
       <div className={style.containerCard}>
@@ -116,7 +124,7 @@ export default function Home() {
             <h1>Zurcher Handyman</h1>
             <div>
               <img src={zurcher} alt="where" className={style.appimage} />
-              
+
             </div>
 
             <IoLogoReact className={style.loguitos} />
@@ -127,15 +135,34 @@ export default function Home() {
             </p>
           </div>
         </a>
+
+        <a href="https://foodticket.vercel.app/" target="new">
+          <div className={style.card}>
+            <h1>Zurcher Handyman</h1>
+            <div>
+              <img src={foodTicket} alt="foodticket" className={style.appimage} />
+
+            </div>
+
+            <IoLogoJavascript className={style.loguitos} />
+            <IoLogoNodejs className={style.loguitos} />
+            <IoLogoReact className={style.loguitos} />
+            <p>
+              Foodticket is a web application designed to streamline order management in a restaurant for both service staff and kitchen staff. The application offers a user-friendly interface
+            </p>
+          </div>
+        </a>
+
       </div>
 
       <ScrollUpButtom />
       <div className={style.about}
-      ref={about}
-        >
-          <div>
+        ref={about}
+      >
+        <div>
           <h1>About me</h1>
-          </div>
+        </div>
+        <div className={style.aboutIn}>
           <img src={profile} alt="" />
           <p>
             I am a Fullstack Developer with experience in JavaScript, React,
@@ -149,6 +176,8 @@ export default function Home() {
             My hobbies are video games, streaming, Formula 1, and paddle tennis.
           </p>
         </div>
+
+      </div>
     </div>
   );
 }

@@ -14,15 +14,24 @@
   font-size: 15px;
   font-size: 18px;
   z-index: 1;
+}
 
+.navbar p{
+  color: rgba(2, 2, 2, 0.87);
+}
+
+.navbar p:hover{
+  color: rgba(2, 2, 2, 0.263);
+  cursor: pointer;
 }
 .namecontainer{
   display: grid;
   grid-template-columns: 600px 600px;
   width: 524px;
   height: 468px;
-  margin-top: 140px;
+  margin-top: 160px;
   margin-left: 80px;
+  margin-bottom: 90px;
   color: rgb(255, 255, 255);
 }
 
@@ -31,6 +40,7 @@
   border-radius: 20px;
   width: 500px;
   height: 400px;
+  margin-left: 250px;
 }
 .name{
   color: rgb(255, 255, 255);
@@ -81,16 +91,24 @@
   margin: 30px;
 }
 
+.projectsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
 .containerCard{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 100px;
-
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .card{
-  background-color: rgb(47, 52, 82);
+  background-color: rgba(0, 0, 0, 0.463);
   width: 300px;
   height: 500px;
   padding: 20px;
@@ -120,13 +138,58 @@ a{
   border: black solid 5px;
   color: rgb(255, 255, 255);
   margin: 130px;
-  padding: 30px;
+  padding: 20px;
   border-radius: 15px;
   font-weight: 800;
+  font-size: 19px;
 }
 .about img{
   width: 200px;
   height: 200px;
   border-radius: 15px;
 
+}
+
+.aboutIn{
+  display: grid;
+  grid-template-columns: 1fr  4fr;
+}
+
+@media(max-width: 480px) {
+
+  .navbar{
+    width: 90%;
+  }
+  .namecontainer{
+    grid-template-columns: 80%;
+  
+  }
+
+  .logos{
+    display:none
+  }
+  .resume{
+    display: none;
+  }
+
+  .namecontainer img{
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    margin-left: 0px;
+    margin-top: 0px;
+  margin-bottom: 0px;
+  }
+
+  .about {
+    margin: 5px;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 800;
+    font-size: 19px;
+  }
+  .aboutIn{
+    grid-template-columns: auto;
+  }
+  
 }
