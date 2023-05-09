@@ -138,7 +138,7 @@ export default function Home() {
 
         <a href="https://foodticket.vercel.app/" target="new">
           <div className={style.card}>
-            <h1>Zurcher Handyman</h1>
+            <h1>FoodTicket</h1>
             <div>
               <img src={foodTicket} alt="foodticket" className={style.appimage} />
 
