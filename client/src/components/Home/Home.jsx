@@ -67,7 +67,7 @@ export default function Home() {
         </div>
 
         <div>
-          <img src={logo} alt=""  className={style.logo}/>
+        <img className={style.logo} src={profile} alt="" />
         </div>
       </div>
 
@@ -153,6 +153,13 @@ export default function Home() {
           </div>
         </a>
 
+        <div className={style.card}>
+          <h2>Working in new projects...</h2>
+          <div>
+            <img src={logo} alt="logo" className={style.appimage} />
+          </div>
+        </div>
+
       </div>
 
       <ScrollUpButtom />
@@ -163,7 +170,7 @@ export default function Home() {
           <h1>About me</h1>
         </div>
         <div className={style.aboutIn}>
-          <img src={profile} alt="" />
+          
           <p>
             I am a Fullstack Developer with experience in JavaScript, React,
             Redux, HTML, CSS, Express, Node JS, SQL, and Sequelize. I focus on

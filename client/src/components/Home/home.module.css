@@ -36,12 +36,7 @@
 }
 
 
-.namecontainer img{
-  border-radius: 20px;
-  width: 500px;
-  height: 400px;
-  margin-left: 250px;
-}
+
 .name{
   color: rgb(255, 255, 255);
   font-style:normal;
@@ -67,6 +62,14 @@
   width: 100px;
   height: 100px;
   color: white;
+}
+
+.logo{
+  border-radius: 12px;
+  width:400px;
+  height: 400px;
+  margin-left: 250px;
+  box-shadow: 20px 20px 0px 0px rgb(0, 0, 0);
 }
 
 .loguitos{
@@ -135,24 +138,18 @@ a{
   justify-content: center;
   text-align: start;
   background-color: rgba(0, 0, 0, 0.596);
-  border: black solid 5px;
+  border: rgb(255, 255, 255) solid 5px;
   color: rgb(255, 255, 255);
   margin: 130px;
   padding: 20px;
   border-radius: 15px;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 19px;
-}
-.about img{
-  width: 200px;
-  height: 200px;
-  border-radius: 15px;
-
 }
 
 .aboutIn{
   display: grid;
-  grid-template-columns: 1fr  4fr;
+  
 }
 
 @media(max-width: 480px) {
