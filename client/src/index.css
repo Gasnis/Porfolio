@@ -13,12 +13,6 @@ body {
   align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-textarea, input { outline: none; }
-input:-webkit-autofill {
-  background-color: #c7a2ed !important;
+a{
+  text-decoration: none !important;
 }

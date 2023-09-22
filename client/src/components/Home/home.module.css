@@ -1,40 +1,39 @@
+.principalDiv{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
 .navbar{
-  display: flex;
-  align-items: center;
-  justify-content:space-around;
+  display:flex;
+  flex-direction: row;
   position: fixed;
+  justify-content: space-around;
+  padding: 12px;
   top: 0px;
-  left: 0px;
+  width: 98%;
+  margin: 10px;
   background-color: rgb(255, 255, 255);
-  width: 97%;
-  border-radius: 50px;
-  margin: 20px;
-  color: rgba(2, 2, 2, 0.87);
+  color: rgba(55, 55, 55, 0.87);
   font-weight: 700;
-  font-size: 15px;
-  font-size: 18px;
+  font-size: 25px;
+  border-radius: 10px;
   z-index: 1;
 }
 
-.navbar p{
-  color: rgba(2, 2, 2, 0.87);
-}
-
-.navbar p:hover{
-  color: rgba(2, 2, 2, 0.263);
+.navlink:hover{
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
+
 .namecontainer{
   display: grid;
-  grid-template-columns: 600px 600px;
-  width: 524px;
-  height: 468px;
-  margin-top: 160px;
-  margin-left: 80px;
-  margin-bottom: 90px;
+  grid-template-columns: auto auto;
+  grid-column-gap:150px;
+  margin-top: 130px;
+  text-align: start;
   color: rgb(255, 255, 255);
 }
-
 
 
 .name{
@@ -42,7 +41,6 @@
   font-style:normal;
   font-weight: 800;
   font-size: 80px;
-  text-align: start;
   margin: 0px;
 }
 
@@ -51,14 +49,10 @@
   font-style:normal;
   font-weight: 800;
   font-size: 50px;
-  text-align: start;
   margin: 0px;
 }
 
 .logos{
-  position: relative;
-  top: 79px;
-  left: 100px;
   width: 100px;
   height: 100px;
   color: white;
@@ -68,7 +62,6 @@
   border-radius: 12px;
   width:400px;
   height: 400px;
-  margin-left: 250px;
   box-shadow: 20px 20px 0px 0px rgb(0, 0, 0);
 }
 
@@ -88,54 +81,14 @@
   border-radius: 50px;
   padding: 20px;
   font-weight:bold;
-  position: relative;
-  top: 150px;
-  left: -200px;
-  margin: 30px;
-}
-
-.projectsContainer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 80px;
-}
-
-.containerCard{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 50px;
-  align-items: center;
-  justify-content: center;
-}
-
-.card{
-  background-color: rgba(0, 0, 0, 0.463);
-  width: 300px;
-  height: 500px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 1px;
-  color: white;
-  margin: 20px;
-}
-
-a{
-  text-decoration: none;
-}
-
-.appimage{
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  margin: 5px;
 }
 
 .about {
   display: flex;
-  flex-direction: column;
+  align-items: start;
   justify-content: center;
+  flex-direction: column;
+  padding-top: 80px;
   text-align: start;
   background-color: rgba(0, 0, 0, 0.596);
   border: rgb(255, 255, 255) solid 5px;
@@ -152,41 +105,76 @@ a{
   
 }
 
-@media(max-width: 480px) {
+.projectsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+}
 
-  .navbar{
-    width: 90%;
+.containerCard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.463);
+  width: 400px; /* Ancho fijo */
+  height: 500px; /* Alto fijo */
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+  text-decoration: none;
   }
+
+.appimage{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px){
   .namecontainer{
-    grid-template-columns: 80%;
-  
-  }
-
-  .logos{
-    display:none
-  }
-  .resume{
-    display: none;
-  }
-
-  .namecontainer img{
-    border-radius: 20px;
-    width: 300px;
-    height: 200px;
-    margin-left: 0px;
-    margin-top: 0px;
-  margin-bottom: 0px;
-  }
-
-  .about {
-    margin: 5px;
-    padding: 20px;
-    border-radius: 15px;
-    font-weight: 800;
-    font-size: 19px;
-  }
-  .aboutIn{
     grid-template-columns: auto;
-  }
+    margin: 0px;
+    margin-top: 60px;
+    padding: 0px;
+    text-align: center;
+}
+
+
+.logo{
+  height: 300px;
+  width: 300px;
+}
+
+
+.about {
+  background-color: rgba(0, 0, 0, 0.596);
+  border: rgb(255, 255, 255) solid 5px;
+  color: rgb(255, 255, 255);
+  margin: 30px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 19px;
+}
+
+.aboutIn{
+  display: grid;
   
+}
 }
