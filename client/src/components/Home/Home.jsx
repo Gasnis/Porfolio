@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import style from "./home.module.css";
 import logo from "../../img/anime.gif";
 import ScrollUpButtom from "../ScrollUpButton/ScrollUpButton.jsx";
-import Contact from "../Contact Me/Contact.jsx"
+import Contact from "../Contact Me/Contact.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
 	IoLogoReact,
@@ -15,8 +15,9 @@ import {
 import videogameslogo from "../../img/videogame.png";
 import where from "../../img/where.png";
 import zurcher from "../../img/zurcher.png";
-import profile from "../../img/profile.jpg";
+import profile from "../../img/profile.png";
 import foodTicket from "../../img/foodticket.png";
+import rickandmorty from "../../img/rickandmorty.png";
 
 export default function Home() {
 	const proyects = useRef();
@@ -38,13 +39,17 @@ export default function Home() {
 
 	return (
 		<div className={style.principalDiv}>
-
-      <div className={style.navbar}>
-        <div onClick={scrolltoabout}  className={style.navlink}>About Me</div>
-        <div onClick={scrolltopproyects}  className={style.navlink}>Projects</div>
-        <div onClick={scrolltocontact}  className={style.navlink}>Contact</div>
-
-      </div>
+			<div className={style.navbar}>
+				<div onClick={scrolltoabout} className={style.navlink}>
+					About Me
+				</div>
+				<div onClick={scrolltopproyects} className={style.navlink}>
+					Projects
+				</div>
+				<div onClick={scrolltocontact} className={style.navlink}>
+					Contact
+				</div>
+			</div>
 
 			<div className={style.namecontainer}>
 				<div>
@@ -55,7 +60,7 @@ export default function Home() {
 						<a
 							target={"new"}
 							href={
-								"https://drive.google.com/file/d/1ml5ruqFtn1wWjNCWfmROwpIoYWwQvOMN/view?usp=sharing"
+								"https://drive.google.com/file/d/1LVf8ug9Fh0MWMxAz-4VWREXnKEbD16z8/view?usp=sharing"
 							}
 							className={style.resume}
 						>
@@ -75,9 +80,9 @@ export default function Home() {
 					<img className={style.logo} src={profile} alt="" />
 				</div>
 			</div>
-      <div ref={about}></div>
+			<div ref={about}></div>
 
-			<div className={style.about} >
+			<div className={style.about}>
 				<div>
 					<h1>About me</h1>
 				</div>
@@ -101,6 +106,28 @@ export default function Home() {
 			</div>
 
 			<div className={style.containerCard}>
+				<a href="https://rick-and-morty-proyect-chi.vercel.app/" target="new">
+					<div className={style.card}>
+						<h1>Rick And Morty App</h1>
+						<div>
+							<img
+								src={rickandmorty}
+								alt="rickandmorty"
+								className={style.appimage}
+							/>
+						</div>
+						<div>
+							<IoLogoReact className={style.loguitos} />
+						</div>
+
+						<p>
+							Rick and morty project are a frontend web with support of The Rick
+							and Morty API and the objetive is render all the characters from
+							this television show
+						</p>
+					</div>
+				</a>
+
 				<a href="https://gasnis-videogames.vercel.app/" target="new">
 					<div className={style.card}>
 						<h1>Videogames</h1>
@@ -197,14 +224,11 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-      <div ref={contact}>
-      <Contact className={style.contact}  ></Contact>
-      </div>
+			<div ref={contact}>
+				<Contact className={style.contact}></Contact>
+			</div>
 
-      <ScrollUpButtom></ScrollUpButtom>
-
-
-      
+			<ScrollUpButtom></ScrollUpButtom>
 		</div>
 	);
 }
