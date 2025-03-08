@@ -225,10 +225,12 @@ export default function Home() {
 				</div>
 			</div>
 			<div ref={contact}>
-				<Contact className={style.contact}></Contact>
+				<Contact/>
 			</div>
 
+
 			<ScrollUpButtom></ScrollUpButtom>
+			
 		</div>
 	);
 }

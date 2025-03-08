@@ -69,6 +69,7 @@
   width: 50px;
   height: 50px;
   color: white;
+  
 }
 
 
@@ -145,6 +146,24 @@
   margin: 5px;
 }
 
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  background-color: rgba(0, 0, 0, 0.596);
+  border: rgb(255, 255, 255) solid 5px;
+  color: rgb(255, 255, 255);
+  margin: 130px;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+
+
 @media screen and (max-width: 768px){
   .namecontainer{
     grid-template-columns: auto;
@@ -177,4 +196,15 @@
   display: grid;
   
 }
+
+.contact{
+  background-color: rgba(0, 0, 0, 0.596);
+  border: rgb(255, 255, 255) solid 5px;
+  color: rgb(255, 255, 255);
+  margin: 30px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 19px;}
 }
